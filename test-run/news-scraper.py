@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 print("All libraries imported successfully.")
 
 # %%
+# USING SELENIUM
 # set selenium webdriver PATH - https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
 # using Driver Management Software
 # selenium version 4+
@@ -32,7 +33,11 @@ link = driver.find_element(news_path)
 print(link.text)
 
 # %%
+# USING REQUESTS
 # use requests for YLE
+import requests
+from bs4 import BeautifulSoup
+
 url = "https://yle.fi/news"
 
 # get html content
