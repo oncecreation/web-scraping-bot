@@ -1,12 +1,13 @@
 # Background
 This project will evolve gradually into a pre-cursor for the [text-summarizer project](https://github.com/prak112/text-summarizer). Text output from this project will be summarized using the text-summarizer.
  
-In test-run, we automate extraction of 'Most Read' news items from YLE news for everyday at a fixed time. Then parse this data into a CSV file. Everyday appends the news items to the same CSV file with date.
+In test-run, we automate extraction of 'Most Read' news items from YLE news for everyday at a fixed time. Then forward this text as an email. Also, parse the data to a CSV. Everyday's extract appends to the news items in the same CSV with date.
 </br></br>
 
 ## Aim 
 - Test-run the Web scraper-bot on YLE news for Most Read news items.
-- Package the Scraper to extract news every day at 1800.
+- Package the Scraper to extract news every day.
+- Send extracted 'Most Read' news items as an email with Subject 'Headlines for Today'.
 - Plan extension of scraper using API</br></br>
 
 ## Sources
@@ -26,4 +27,5 @@ In test-run, we automate extraction of 'Most Read' news items from YLE news for 
 - Currently, using URL to access desired webpage
 - Extract data from class_ element
 - Filter content for 'Most Read' from class_ content
-- Parse into a csv file
+- Send the text as an email through an email client 
+
