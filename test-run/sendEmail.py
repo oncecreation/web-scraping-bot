@@ -1,6 +1,12 @@
+# CONCLUSION
+"""
+- Use function to develop AWS SES solution for sending news in email using AWS SDK. 
+- Import from dealflow-scraper/awstranslate for more info.
+"""
+
+ 
 # Source
 # https://djangocentral.com/sending-emails-with-csv-attachment-using-python/
-
 
 # Untouched-CODE
 from email.mime.multipart import MIMEMultipart
@@ -10,6 +16,10 @@ import smtplib
 
 
 def send_mail():
+    """
+    
+    """
+    
     # Create a multipart message
     msg = MIMEMultipart()
     body_part = MIMEText(MESSAGE_BODY, 'plain')
@@ -19,8 +29,8 @@ def send_mail():
     # Add body to email
     msg.attach(body_part)
     # open and read the CSV file in binary
-    with open(PATH_TO_CSV_FILE,'rb') as file:
-    # Attach the file with filename to the email
+    with open(FILE_PATH,'rb') as file:
+# Attach the file with filename to the email    
         msg.attach(MIMEApplication(file.read(), Name=FILE_NAME))
 
     # Create SMTP object

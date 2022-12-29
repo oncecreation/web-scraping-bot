@@ -29,7 +29,7 @@ for item in content:
 print('Total items extracted, including headlines : ', len(allItems),'\n')
 
 # Parse 'Most Read' news items into CSV using built-in 'csv'
-myFile =  open('newsToday.csv', 'w')
+myFile =  open('test-run/newsToday.csv', 'w')
 writer = csv.writer(myFile, delimiter='\n')
 writer.writerow(allItems)
 myFile.close()
@@ -62,7 +62,8 @@ print('Updated essential information\n')
 server = smtplib.SMTP('')
 
 # identify and secure server
-server.ehlo()
+server.connect(host=)
+server.ehlo() # --> error here, resolve -> run server.connect(hostname=, port_num=)
 server.starttls()
 server.ehlo()
 
